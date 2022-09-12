@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  db_auth:
+    container_name: name
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=admin
+      - POSTGRES_DB=apartments
+    image: postgres:14.5-alpine
+
+  app :
+    build: ./app/
